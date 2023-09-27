@@ -156,7 +156,31 @@ FROM emp
  SELECT ename, sal
  FROM emp
  WHERE sal between 2500 and 3000;
- 
+ -- EXERCICIOS --
  SELECT deptno, ename, sal from emp
- WHERE deptno=20
+ WHERE deptno=20;
+ 
+ SELECT empno, ename, hiredate FROM emp WHERE ename="JAMES";
+ 
+ SELECT empno, job, sal FROM emp WHERE job<>"MANAGER";
+ 
+ SELECT empno, job, sal FROM emp WHERE job IN ("PRESIDENT", "ANALYST");
+ -- EXERCICIOS END --
+ 
+ -- operador like --
+ SELECT * FROM emp WHERE ename LIKE "K%";
+ 
+ SELECT * FROM emp WHERE ename like "__L%";
+
+SELECT ename, job, sal, sal +500 FROM emp WHERE job="ANALYST";
+
+SELECT ename, job, sal, 12*SAL +200 FROM emp;
+SELECT ename, job, sal, 12*(SAL +200) FROM emp;
+
+SELECT empno, ename, job, sal FROM emp WHERE sal >=1100 AND job= "clerk";
+
+SELECT empno, ename, job, sal FROM emp WHERE sal >2500
+
+
+
 
